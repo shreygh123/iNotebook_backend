@@ -34,7 +34,7 @@ const Note = (props) => {
 
   const updatenote = (currentnote) => {
     ref.current.click();
-    setnote({ id: currentnote._id, etitle: currentnote.title, edescription: currentnote.description, etag: currentnote.tag });
+    setnote({ id: currentnote._id, etitle: currentnote.title, edescription: currentnote.description, etag: currentnote.tag })
 
   }
   return (
@@ -78,7 +78,7 @@ const Note = (props) => {
         </div>
         {notes.map((note) => {
           return <Noteitem key={note._id} notes={note} updatenote={updatenote} showAlert={props.showAlert} />
-        })};
+        })}
       </div>
 
     </>
