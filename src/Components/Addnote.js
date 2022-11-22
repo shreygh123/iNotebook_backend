@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
 import noteContext from '../Context/Notes/noteContext';
-
+import './cssfiles.css'
 const Addnote = (props) => {
     const a = useContext(noteContext)
     const { addNote } = a;
@@ -15,8 +15,8 @@ const Addnote = (props) => {
         setnote({ ...note, [e.target.name]: e.target.value })
     }
     return(  
-    <div className="container my-3">
-        <h2 >✍🏻 Add a note</h2>
+    <div className="container my-3 ">
+        <h2 className='moveup' >✍🏻 Add a note</h2>
         <form>
         <div className="mb-3 my-4">
                     <label htmlFor="tag" className="form-label">Tags</label>

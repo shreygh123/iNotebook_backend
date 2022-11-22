@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from "react-router-dom";
 import { useNavigate } from 'react-router-dom'
+import './cssfiles.css';
 function Navbar() {
   const navigate = useNavigate();
 
@@ -10,9 +11,9 @@ function Navbar() {
     navigate("/login");
   }
   return (
-    <div>
+    <>
 
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark" >
+      <nav className="navbar navbar-expand-lg fixed-top navbar-dark bg-dark a  md-10" >
         <div className="container-fluid">
           <Link className="navbar-brand" to="/login">iNotebook</Link>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,7 +36,12 @@ function Navbar() {
           </div>
         </div>
       </nav>
-    </div>
+
+
+ 
+    </>
+
+    
   )
 }
 

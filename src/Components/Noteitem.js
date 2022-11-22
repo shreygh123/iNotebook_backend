@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import noteContext from '../Context/Notes/noteContext';
-
+import './cssfiles.css'
 
 const Noteitem = (props) => {
     const a = useContext(noteContext)
@@ -12,16 +12,16 @@ const Noteitem = (props) => {
 
 
     return (
-        <div className=" col-md-3 my-3">
+        <div className=" col-md-3 my-3 ">
            
-            <div className="card ">
+            <div className="card cardi">
 
-                <div className="card-body ">
-                <span className="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-danger">
+                <span className="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-danger overwr">
                 <i className="fas fa-trash mx-2 my-1" onClick={() => { return deleteNote(notes._id) ,props.showAlert("Deleted successfully", "success");}}></i>
                 <i className="fas fa-edit mx-2 my-1" onClick={() => { return updatenote(notes) }}></i>
             </span>
-                    <div className="d-flex align-items-center">
+                <div className="card-body ">
+                    <div className="d-flex align-items-center ">
 
                         <h5 className="card-title">{notes.title}</h5>
 

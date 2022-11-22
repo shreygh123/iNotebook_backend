@@ -1,7 +1,8 @@
 import React from 'react';
+import './cssfiles.css'
 function About() {
   return (
-    <div>
+    <div className='mlo'>
       <h4>This is about iNotebook:</h4>
     <p className="mx-3 mt-5"> Using iNotebook you could-</p>
     <ul className="list-group list-group-flush list-group-numbered mx-5">

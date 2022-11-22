@@ -1,13 +1,15 @@
 import React,{useState} from 'react';
 import { useNavigate } from 'react-router-dom'
+import './cssfiles.css';
 
 const Login = (props) => {
     const [credentials, setcredentials] = useState({email:"",password:""});
     const navigate = useNavigate();
     const handleClick = async(e) => {
         e.preventDefault();
-            // API Call 
-            const response = await fetch("https://inotebook-backend-5jzy.onrender.com/api/auth/login", {
+            // API Call http://localhost:5000
+            const response = await fetch("https://inotebook-backend-gddm.onrender.com/api/auth/login", {
+            // const response = await fetch("http://localhost:5000/api/auth/login", {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
@@ -35,11 +37,14 @@ const Login = (props) => {
       
     return (<div className='my-3'>
         <div className='text-center my-4'>
-                <h1>iNOTEBOOK</h1>
-                <p><b>Your notes on cloud ☁️</b></p>
+        <div class="loader moveup">
+        <span>iNOTEBOOK</span>
+    </div>
+                {/* <h1 class="loader">iNOTEBOOK</h1> */}
+                <p ><b>Your notes on cloud ☁️</b></p>
             </div>
         <form onSubmit={handleClick}>
-        <p className="text-center"><i>Login to continue using iNotebook 😊 </i></p>
+        <p className="text-center "><i>Login to continue using iNotebook 😊 </i></p>
 
             <div className="mb-3">
                 <label htmlFor="email" className="form-label">Email address</label>
